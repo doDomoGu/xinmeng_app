@@ -1,5 +1,5 @@
 <?php
-namespace frontend\models;
+namespace hanabi8\models;
 
 use yii\base\Model;
 use common\models\User;

@@ -1,5 +1,5 @@
 <?php
-namespace frontend\controllers;
+namespace hanabi8\controllers;
 
 use Yii;
 use yii\base\InvalidParamException;
@@ -8,10 +8,10 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
-use frontend\models\PasswordResetRequestForm;
-use frontend\models\ResetPasswordForm;
-use frontend\models\SignupForm;
-use frontend\models\ContactForm;
+use hanabi8\models\PasswordResetRequestForm;
+use hanabi8\models\ResetPasswordForm;
+use hanabi8\models\SignupForm;
+use hanabi8\models\ContactForm;
 
 /**
  * Site controller

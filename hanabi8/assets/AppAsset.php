@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\assets;
+namespace hanabi8\assets;
 
 use yii\web\AssetBundle;
 

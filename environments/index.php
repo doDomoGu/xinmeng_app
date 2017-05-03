@@ -32,18 +32,18 @@ return [
     'Development' => [
         'path' => 'dev',
         'setWritable' => [
-            'backend/runtime',
-            'backend/web/assets',
-            'frontend/runtime',
-            'frontend/web/assets',
+            'api/runtime',
+            'api/web/assets',
+            'hanabi8/runtime',
+            'hanabi8/web/assets',
         ],
         'setExecutable' => [
             'yii',
             'yii_test',
         ],
         'setCookieValidationKey' => [
-            'backend/config/main-local.php',
-            'frontend/config/main-local.php',
+            'api/config/main-local.php',
+            'hanabi8/config/main-local.php',
         ],
     ],
     'Production' => [
@@ -51,15 +51,15 @@ return [
         'setWritable' => [
             'backend/runtime',
             'backend/web/assets',
-            'frontend/runtime',
-            'frontend/web/assets',
+            'hanabi8/runtime',
+            'hanabi8/web/assets',
         ],
         'setExecutable' => [
             'yii',
         ],
         'setCookieValidationKey' => [
             'backend/config/main-local.php',
-            'frontend/config/main-local.php',
+            'hanabi8/config/main-local.php',
         ],
     ],
 ];
