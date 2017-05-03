@@ -7,28 +7,27 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'app-backend',
+    'id' => 'app-ucenter',
     'basePath' => dirname(__DIR__),
-    'controllerNamespace' => 'api\controllers',
+    'controllerNamespace' => 'ucenter\controllers',
     'bootstrap' => ['log'],
     'modules' => [
-        'v1' => [
-            'class' => 'api\modules\v1\Module',
+        'admin' => [
+            'class' => 'ucenter\modules\admin\Module',
         ]
     ],
     'components' => [
         'request' => [
-            'csrfParam' => '_csrf-backend',
+            'csrfParam' => '_csrf-ucenter',
         ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
-            'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
-            //'loginUrl' => ['/site/login'],
+            'identityCookie' => ['name' => '_identity-ucenter', 'httpOnly' => true],
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
-            'name' => 'advanced-backend',
+            'name' => 'advanced-sample',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

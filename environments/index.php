@@ -36,6 +36,8 @@ return [
             'api/web/assets',
             'hanabi8/runtime',
             'hanabi8/web/assets',
+            'ucenter/runtime',
+            'ucenter/web/assets',
         ],
         'setExecutable' => [
             'yii',
@@ -44,6 +46,7 @@ return [
         'setCookieValidationKey' => [
             'api/config/main-local.php',
             'hanabi8/config/main-local.php',
+            'ucenter/config/main-local.php',
         ],
     ],
     'Production' => [
