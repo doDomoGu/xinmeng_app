@@ -1,19 +1,19 @@
 <?php
 namespace api\modules\v1\controllers;
 
-use ucenter\models\UserWxOpenid;
+/*use ucenter\models\UserWxOpenid;
 use ucenter\models\UserWxSession;
-use ucenter\models\User;
+use ucenter\models\User;*/
 use yii\rest\ActiveController;
 use yii\web\Response;
 use Yii;
 
 class DefaultController extends ActiveController
 {
-    public function init(){
+    /*public function init(){
         $this->modelClass = User::className();
         parent::init();
-    }
+    }*/
 
     public function behaviors()
     {
@@ -29,7 +29,7 @@ class DefaultController extends ActiveController
         $actions = parent::actions();
 
         // 注销系统自带的实现方法
-        unset($actions['index']);
+       //unset($actions['index']);
 
         //unset($actions['create']);
         //unset($actions['update']);
@@ -38,7 +38,7 @@ class DefaultController extends ActiveController
         return $actions;
     }
 
-    public function verbs(){
+    /*public function verbs(){
         return [
             'index' => ['POST', 'GET', 'HEAD'],
             'view' => ['GET', 'HEAD'],
@@ -46,11 +46,11 @@ class DefaultController extends ActiveController
             'update' => ['PUT', 'PATCH'],
             'delete' => ['DELETE'],
         ];
-    }
+    }*/
 
     public function actionIndex()
     {
-
+echo 111;exit;
         return ['sss','222'];
         if(Yii::$app->request->get('key_pp')!=''){
             $key = Yii::$app->request->get('key_pp');
