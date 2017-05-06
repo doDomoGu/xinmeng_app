@@ -2,18 +2,18 @@
 namespace api\modules\v1\controllers;
 
 /*use ucenter\models\UserWxOpenid;
-use ucenter\models\UserWxSession;
-use ucenter\models\User;*/
+use ucenter\models\UserWxSession;*/
+use common\models\User;
 use yii\rest\ActiveController;
 use yii\web\Response;
 use Yii;
 
 class DefaultController extends ActiveController
 {
-    /*public function init(){
+    public function init(){
         $this->modelClass = User::className();
         parent::init();
-    }*/
+    }
 
     public function behaviors()
     {
@@ -50,7 +50,7 @@ class DefaultController extends ActiveController
 
     public function actionIndex()
     {
-echo 111;exit;
+echo 1339399311;exit;
         return ['sss','222'];
         if(Yii::$app->request->get('key_pp')!=''){
             $key = Yii::$app->request->get('key_pp');

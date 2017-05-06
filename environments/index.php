@@ -32,21 +32,21 @@ return [
     'Development' => [
         'path' => 'dev',
         'setWritable' => [
-            'api/runtime',
-            'api/web/assets',
-            'hanabi8/runtime',
-            'hanabi8/web/assets',
-            'ucenter/runtime',
-            'ucenter/web/assets',
+            'app/api/runtime',
+            'app/api/web/assets',
+            'app/hanabi8/runtime',
+            'app/hanabi8/web/assets',
+            'app/ucenter/runtime',
+            'app/ucenter/web/assets',
         ],
         'setExecutable' => [
             'yii',
             'yii_test',
         ],
         'setCookieValidationKey' => [
-            'api/config/main-local.php',
-            'hanabi8/config/main-local.php',
-            'ucenter/config/main-local.php',
+            'app/api/config/main-local.php',
+            'app/hanabi8/config/main-local.php',
+            'app/ucenter/config/main-local.php',
         ],
     ],
     'Production' => [

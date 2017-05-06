@@ -3,9 +3,9 @@ namespace api\controllers;
 
 use Yii;
 use yii\web\Controller;
-use yii\filters\VerbFilter;
+/*use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\LoginForm;
+use common\models\LoginForm;*/
 
 /**
  * Site controller
@@ -15,7 +15,7 @@ class SiteController extends Controller
     /**
      * @inheritdoc
      */
-    public function behaviors()
+   /* public function behaviors()
     {
         return [
             'access' => [
@@ -39,7 +39,7 @@ class SiteController extends Controller
                 ],
             ],
         ];
-    }
+    }*/
 
     /**
      * @inheritdoc
@@ -60,7 +60,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        echo 1;exit;
+        echo 1222;exit;
         return $this->render('index');
     }
 
