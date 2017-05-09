@@ -13,6 +13,10 @@ class User extends ActiveRecord implements IdentityInterface
     const STATUS_ACTIVE = 1;
     const STATUS_BANNED = 0;
 
+    public static function getDb(){
+        return Yii::$app->db_ucenter;
+    }
+
     public static function tableName()
     {
         return '{{%user}}';

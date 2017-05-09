@@ -5,5 +5,10 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'user' => [
+            'identityClass' => 'ucenter\models\User',
+            'enableAutoLogin' => true,
+            'enableSession' => false
+        ],
     ],
 ];

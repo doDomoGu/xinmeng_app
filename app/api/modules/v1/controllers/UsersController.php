@@ -3,12 +3,13 @@ namespace api\modules\v1\controllers;
 
 /*use ucenter\models\UserWxOpenid;
 use ucenter\models\UserWxSession;*/
-use common\models\User;
+use ucenter\models\User;
+use yii\data\ActiveDataProvider;
 use yii\rest\ActiveController;
 use yii\web\Response;
 use Yii;
 
-class UserController extends ActiveController
+class UsersController extends ActiveController
 {
     public function init(){
         $this->modelClass = User::className();
@@ -29,7 +30,7 @@ class UserController extends ActiveController
         $actions = parent::actions();
 
         // 注销系统自带的实现方法
-       //unset($actions['index']);
+        unset($actions['index']);
 
         //unset($actions['create']);
         //unset($actions['update']);
@@ -38,7 +39,7 @@ class UserController extends ActiveController
         return $actions;
     }
 
-    /*public function verbs(){
+    public function verbs(){
         return [
             'index' => ['POST', 'GET', 'HEAD'],
             'view' => ['GET', 'HEAD'],
@@ -46,9 +47,21 @@ class UserController extends ActiveController
             'update' => ['PUT', 'PATCH'],
             'delete' => ['DELETE'],
         ];
-    }*/
+    }
 
+    public function actionView(){
+        echo 1;
+    }
     public function actionIndex()
+     {
+        /* $modelClass = $this->modelClass;
+         $query = $modelClass::find();
+         return new ActiveDataProvider([
+             'query' => $query
+         ]);*/
+     }
+
+    public function actionIndex2222()
     {
 echo 1339399311;exit;
         return ['sss','222'];

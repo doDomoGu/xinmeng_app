@@ -45,9 +45,15 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            /*'enableStrictParsing' =>true,*/
+            'enableStrictParsing' =>true,
             'rules' => [
-            ],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => ['v1/users'],
+
+                ],
+                //'GET v1/users'  => 'v1/users/view'
+            ]
         ],
     ],
     'params' => $params,
