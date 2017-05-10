@@ -13,6 +13,7 @@ class User extends ActiveRecord implements IdentityInterface
     const STATUS_ACTIVE = 1;
     const STATUS_BANNED = 0;
 
+
     public static function getDb(){
         return Yii::$app->db_ucenter;
     }
@@ -22,24 +23,40 @@ class User extends ActiveRecord implements IdentityInterface
         return '{{%user}}';
     }
 
-    /**
-     * @inheritdoc
-     */
     public function behaviors()
     {
         return [
-            TimestampBehavior::className(),
+            //TimestampBehavior::className(),
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
+    public function attributeLabels(){
+        return [
+            'username' => '用户名(邮箱)',
+            'password' => '密码',
+            'password_true' => '密码22',
+            'nickname' => '昵称',
+            'mobile' => '联系手机',
+            'email' => '邮箱',
+            'avatar' => '头像',
+            'gender' => '性别',
+            'birthday' => '生日',
+            'reg_time' => '注册时间',
+            'password_reset_token' => '密码重置秘钥',
+            'auth_key' => '身份认证秘钥',
+            'status' => '状态'
+        ];
+    }
+
+
     public function rules()
     {
         return [
+            [['username','password','password_true'],'required'],
+            [['mobile','email','reg_time','password_reset_token','auth_key','avatar','nickname'],'safe'],
+            ['gender','integer'],
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
-            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
+            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED,self::STATUS_BANNED]],
         ];
     }
 

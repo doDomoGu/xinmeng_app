@@ -47,12 +47,14 @@ return [
             'showScriptName' => false,
             'enableStrictParsing' =>true,
             'rules' => [
+                //'DELETE v1/users'  => 'v1/users/delete',
                 [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => ['v1/users'],
+                    //'pluralize' => true
 
                 ],
-                //'GET v1/users'  => 'v1/users/view'
+
             ]
         ],
     ],
