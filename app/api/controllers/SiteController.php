@@ -12,6 +12,10 @@ use common\models\LoginForm;*/
  */
 class SiteController extends Controller
 {
+  public function beforeAction(){
+      var_dump(Yii::$app->controller->action->id);
+      exit;
+  }
     /**
      * @inheritdoc
      */
@@ -44,14 +48,14 @@ class SiteController extends Controller
     /**
      * @inheritdoc
      */
-    public function actions()
+   /* public function actions()
     {
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
             ],
         ];
-    }
+    }*/
 
     /**
      * Displays homepage.
@@ -60,8 +64,14 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        echo 1222;exit;
-        return $this->render('index');
+        echo 1222;
+        exit;
+
+        //return $this->render('index');
+    }
+
+    public function actionError(){
+        echo 'error';exit;
     }
 
     /**
