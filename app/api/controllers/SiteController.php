@@ -12,9 +12,11 @@ use common\models\LoginForm;*/
  */
 class SiteController extends Controller
 {
-  public function beforeAction(){
+  public function beforeAction2(){
+
       var_dump(Yii::$app->controller->action->id);
-      exit;
+
+      var_dump($this->defaultAction);
   }
     /**
      * @inheritdoc
@@ -62,16 +64,13 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex()
-    {
-        echo 1222;
-        exit;
+    public function actionIndex(){
 
-        //return $this->render('index');
+        return $this->render('index');
     }
 
     public function actionError(){
-        echo 'error';exit;
+        echo 'error333';exit;
     }
 
     /**
