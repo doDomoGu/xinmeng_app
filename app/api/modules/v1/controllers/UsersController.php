@@ -25,7 +25,12 @@ class UsersController extends ActiveController
         $behaviors['authenticator'] = [
             'class' => QueryParamAuth::className(),
             // 设置token名称，默认是access-token
-            'tokenParam' => 'token'
+            'tokenParam' => 'token',
+            'optional' => [
+                'index',
+                'signup-test',
+                'view'
+            ],
         ];
         return $behaviors;
     }
