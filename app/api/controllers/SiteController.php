@@ -12,12 +12,6 @@ use common\models\LoginForm;*/
  */
 class SiteController extends Controller
 {
-  public function beforeAction2(){
-
-      var_dump(Yii::$app->controller->action->id);
-
-      var_dump($this->defaultAction);
-  }
     /**
      * @inheritdoc
      */
@@ -65,7 +59,7 @@ class SiteController extends Controller
      * @return string
      */
     public function actionIndex(){
-
+echo 'index';exit;
         return $this->render('index');
     }
 
@@ -73,36 +67,5 @@ class SiteController extends Controller
         echo 'error333';exit;
     }
 
-    /**
-     * Login action.
-     *
-     * @return string
-     */
-    public function actionLogin()
-    {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
 
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        } else {
-            return $this->render('login', [
-                'model' => $model,
-            ]);
-        }
-    }
-
-    /**
-     * Logout action.
-     *
-     * @return string
-     */
-    public function actionLogout()
-    {
-        Yii::$app->user->logout();
-
-        return $this->goHome();
-    }
 }

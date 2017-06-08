@@ -46,7 +46,7 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'enableStrictParsing' =>true,
+            //'enableStrictParsing' =>true,
             'rules' => [
                 //'DELETE v1/users'  => 'v1/users/delete',
                 [
