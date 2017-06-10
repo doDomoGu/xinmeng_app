@@ -41,7 +41,7 @@ class UsersController extends ActiveController
         $actions = parent::actions();
         //unset($actions['delete'], $actions['create']);
         // 注销系统自带的实现方法
-        //unset($actions['index']);
+        unset($actions['index']);
 
         //unset($actions['create']);
         //unset($actions['update']);
@@ -62,6 +62,31 @@ class UsersController extends ActiveController
 
     public function actionDelete(){
         echo 1;exit;
+    }
+
+    public function actionIndex(){
+        $arr = [
+          "1"=>["id"=>1,"name"=>"Dan111"],
+          "2"=>["id"=>2,"name"=>"Marie222"],
+          "3"=>["id"=>3,"name"=>"Jessie333"]
+        ];
+
+        /*{
+            "1": {
+            "id": "1",
+    "name": "Dan"
+  },
+  "2": {
+            "id": "2",
+    "name": "Marie"
+  },
+  "3": {
+            "id": "3",
+    "name": "Jessie"
+  }
+}*/
+
+        return $arr;
     }
 
     /*
